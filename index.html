@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maze Lab</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Maze Lab</h1>
+            <div class="game-info">
+                <div class="timer">Zeit: <span id="time">0</span>s</div>
+                <div class="level">Level: <span id="level">1</span></div>
+                <div class="best-time">Bestzeit: <span id="best-time">-</span>s</div>
+            </div>
+        </header>
+
+        <main class="game-area">
+            <div class="maze-container">
+                <canvas id="mazeCanvas" width="600" height="400"></canvas>
+            </div>
+            
+            <div class="controls">
+                <div class="control-buttons">
+                    <button id="start-btn">Neues Spiel</button>
+                    <button id="restart-btn">Neustart</button>
+                </div>
+                <div class="difficulty">
+                    <label for="difficulty">Schwierigkeit:</label>
+                    <select id="difficulty">
+                        <option value="easy">Einfach</option>
+                        <option value="medium">Mittel</option>
+                        <option value="hard">Schwer</option>
+                    </select>
+                </div>
+            </div>
+        </main>
+
+        <div class="win-screen" id="win-screen" style="display: none;">
+            <h2>Gewonnen!</h2>
+            <p>Zeit: <span id="win-time">0</span>s</p>
+            <p>Bestzeit: <span id="win-best-time">-</span>s</p>
+            <button id="next-level-btn">Nächstes Level</button>
+        </div>
+
+        <footer class="footer">
+            <p>Steuerung: Pfeiltasten oder WASD</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
